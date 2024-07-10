@@ -30,15 +30,21 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    ```sh
    venv\Scripts\activate
    ```
-6. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
-7. Run the Flask application: `python3 app.py`
-8. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
-9. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
+6. Install the dependencies using the requirements.txt file:
+   ```sh
+   pip install -r requirements.txt
+   ```
+8. Run the Flask application:
+   ```sh
+   python3 app.py
+   ```
+10. Your SCC app will start locally, and you can access it in your web browser at `http://127.0.0.1:5000`
+11. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
 
 Note:
 1. You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
 2. ABG = above-ground carbon stock in gC/m2
 3. BGC = below-ground carbon stock in gC/m2
-4. TC = total carbon stock in gC/m2; it does not always ABG+BGC, but a direct calculation based on model from the source (Wahyudi et al., 2020)
+4. TC = total carbon stock in gC/m2; it does not always ABG+BGC, but a direct calculation based on the model from the source: Wahyudi et al., (2020)
 5. CS = carbon sequestration or assimilation rate, i.e., carbon dioxide that assimilated to the biomass in tC/ha/yr
 6. TC-conversion = total carbon stock in tC/ha
