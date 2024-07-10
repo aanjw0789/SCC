@@ -1,7 +1,7 @@
 # SCC
-==================================
+----------------------------------
 ## Seagrass Carbon Calculator
-==================================
+----------------------------------
 
 _The app is developed by A. J. Wahyudi with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
 
@@ -65,3 +65,7 @@ You will get the results:
 ---------------------------------
 You can use `SCC-GUI-Python-code-standalone.ipynb` and run it directly on platforms like Jupyter Notebook or Google Colab.
 
+---------------------------------
+## Batch Calculation
+---------------------------------
+You can use `batch calculation-SCC.ipynb` for large data calculations (i.e., Excel file dataset). Run the Python code directly on platforms like Jupyter Notebook or Google Colab. Example of dataset format may refer to `batch file test.xlsx`
