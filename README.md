@@ -25,10 +25,11 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    a. On MacOS and Linux:
    ```sh
    source venv/bin/activate
-   
+   ```
    b. On Windows:
    ```sh
    venv\Scripts\activate
+   ```
 6. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
 7. Run the Flask application: `python3 app.py`
 8. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
