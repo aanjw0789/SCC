@@ -22,9 +22,9 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
 7. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
 
 Note:
-You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
-ABG = above-ground carbon stock in gC/m2
-BGC = below-ground carbon stock in gC/m2
-TC = total carbon stock in gC/m2; it does not always ABG+BGC, but a direct calculation based on model from the source (Wahyudi et al., 2020)
-CS = carbon sequestration or assimilation rate, i.e., carbon dioxide that assimilated to the biomass in tC/ha/yr
-TC-conversion = total carbon stock in tC/ha
+1. You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
+2. ABG = above-ground carbon stock in gC/m2
+3. BGC = below-ground carbon stock in gC/m2
+4. TC = total carbon stock in gC/m2; it does not always ABG+BGC, but a direct calculation based on model from the source (Wahyudi et al., 2020)
+5. CS = carbon sequestration or assimilation rate, i.e., carbon dioxide that assimilated to the biomass in tC/ha/yr
+6. TC-conversion = total carbon stock in tC/ha
