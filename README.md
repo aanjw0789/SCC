@@ -15,13 +15,18 @@ Wahyudi, A. J., Rahmawati, S., Irawan, A., Hadiyanto, H., Prayudha, B., Hafizt, 
 ## Installation Guide
 ----------------------------------
 Run the Seagrass Carbon Calculator (SCC) Application Locally
-1. Install [Python 3](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23)
-2. Save `app.py` file and the `templates` folder in your project directory.
-3. Open a terminal or command prompt, navigate to your project directory, and create a virtual environment:
+1. Clone the GitHub Repository:
+   ```sh
+   git clone https://github.com/aanjw0789/SCC.git
+   cd SCC
+   ```
+3. Install [Python 3](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23)
+4. Save `app.py` file and the `templates` folder in your project directory.
+5. Open a terminal or command prompt, navigate to your project directory, and create a virtual environment:
    ```sh
    python3 -m venv venv
 
-4. Activate the virtual environment:
+6. Activate the virtual environment:
 
    a. On MacOS and Linux:
    ```sh
@@ -31,7 +36,7 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    ```sh
    venv\Scripts\activate
    ```
-6. Install the dependencies using the requirements.txt file:
+7. Install the dependencies using the requirements.txt file:
    ```sh
    pip install -r requirements.txt
    ```
