@@ -1,9 +1,9 @@
-# SCC
 ----------------------------------
-## Seagrass Carbon Calculator
+# Seagrass Carbon Calculator (SCC)
 ----------------------------------
 
-_The app is developed by A. J. Wahyudi with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
+_The graphical user interface (GUI) and all codes are developed by A. J. Wahyudi with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
+_The last update: 10 July 2024_
 
 PLEASE read the [CC-BY-4.0 license](https://github.com/aanjw0789/SCC/?tab=CC-BY-4.0-1-ov-file) of this app code.
 
