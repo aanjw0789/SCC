@@ -22,12 +22,17 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    python3 -m venv venv
 
 4. Activate the virtual environment:
-   a. On MacOS and Linux: ```sh source venv/bin/activate
-   b. On Windows: `venv\Scripts\activate`
-5. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
-6. Run the Flask application: `python3 app.py`
-7. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
-8. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
+   a. On MacOS and Linux:
+   ```sh
+   source venv/bin/activate
+   
+   b. On Windows:
+   ```sh
+   venv\Scripts\activate
+6. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
+7. Run the Flask application: `python3 app.py`
+8. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
+9. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
 
 Note:
 1. You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
