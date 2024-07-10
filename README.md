@@ -59,3 +59,9 @@ You will get the results:
   * TC = total carbon stock in gC/m2; it does not always ABG+BGC, but a direct calculation based on the model from the source: Wahyudi et al., (2020)
   * CS = carbon sequestration or assimilation rate, i.e., carbon dioxide that assimilated to the biomass in tC/ha/yr
   * TC-conversion = total carbon stock in tC/ha
+
+---------------------------------
+## Alternative
+---------------------------------
+You can use `SCC-GUI-Python-code-standalone.ipynb` and run it directly on platforms like Jupyter Notebook or Google Colab.
+
