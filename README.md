@@ -16,7 +16,7 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
 1. Install [Python 3](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23) and the main dependencies: 'numpy' and 'pandas'
 3. Save 'app.py' file and the 'templates' folder in your project directory.
 4. Open a terminal or command prompt, navigate to your project directory, and install 'Flask' e.g., using the following code: "!pip install flask"
-5. Run the Flask application using the following command:
+5. Run the SCC flask application using the following command:
    "python app.py"
 6. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
 7. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
