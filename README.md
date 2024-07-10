@@ -1,7 +1,9 @@
 # SCC
+==================================
 ## Seagrass Carbon Calculator
 ==================================
-The app is developed by A. J. Wahyudi
+
+### The app is developed by A. J. Wahyudi
 
 PLEASE read the [CC-BY-4.0 license](https://github.com/aanjw0789/SCC/?tab=CC-BY-4.0-1-ov-file) of this app code.
 
@@ -13,13 +15,19 @@ Wahyudi, A. J., Rahmawati, S., Irawan, A., Hadiyanto, H., Prayudha, B., Hafizt, 
 ## Installation Guide
 ----------------------------------
 Run the Seagrass Carbon Calculator (SCC) Application Locally
-1. Install [Python 3](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23) and the main dependencies: 'numpy' and 'pandas'
-3. Save 'app.py' file and the 'templates' folder in your project directory.
-4. Open a terminal or command prompt, navigate to your project directory, and install 'Flask' e.g., using the following code: "!pip install flask"
-5. Run the SCC flask application using the following command:
-   "python3 app.py"
-6. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
-7. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
+1. Install [Python 3](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23)
+2. Save `app.py` file and the `templates` folder in your project directory.
+3. Open a terminal or command prompt, navigate to your project directory, and create a virtual environment:
+   ```sh
+   python3 -m venv venv
+
+4. Activate the virtual environment:
+   a. On MacOS and Linux: `source venv/bin/activate`
+   b. On Windows: `venv\Scripts\activate`
+5. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
+6. Run the Flask application: `python3 app.py`
+7. Your SCC app will start locally, and you can access it in your web browser at http://127.0.0.1:5000
+8. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
 
 Note:
 1. You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
