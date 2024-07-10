@@ -22,6 +22,7 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    python3 -m venv venv
 
 4. Activate the virtual environment:
+
    a. On MacOS and Linux:
    ```sh
    source venv/bin/activate
