@@ -3,7 +3,7 @@
 ## Seagrass Carbon Calculator
 ==================================
 
-### The app is developed by A. J. Wahyudi
+_The app is developed by A. J. Wahyudi of IMBeR Group_
 
 PLEASE read the [CC-BY-4.0 license](https://github.com/aanjw0789/SCC/?tab=CC-BY-4.0-1-ov-file) of this app code.
 
