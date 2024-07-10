@@ -1,0 +1,112 @@
+#GUI
+import tkinter as tk
+from tkinter import ttk
+import pandas as pd
+import numpy as np
+
+# Define the function to calculate ABG, BGC, TC, CS, and TC-conversion
+def calculate_values(df):
+    df['ABG[gC/m2]'] = np.where(
+        (df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 0,
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 12.63086 + 0.061001 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 14.26965 + 0.062445 * df['biomass[g/m2]'] - 0.044118 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 12.63086 + 0.061001 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 21.33781 + 0.13514 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] > 0), 21.33781 + 0.13514 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 29.609031 - 0.001435 * df['density[shoots/m2]'],
+        14.26965 + 0.062445 * df['biomass[g/m2]'] - 0.044118 * df['coverage[%]'])))))))
+
+    df['BGC[gC/m2]'] = np.where(
+        (df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 0,
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 6.00388 + 0.214211 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), -4.365552 + 0.21622 * df['biomass[g/m2]'] + 0.218579 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 0.451447 + 0.216752 * df['biomass[g/m2]'] + 0.006902 * df['density[shoots/m2]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 53.2301 + 0.3055 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] > 0), 53.2301 + 0.3055 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 65.28627 + 0.00201 * df['density[shoots/m2]'],
+        -3.942647 + 0.21748 * df['biomass[g/m2]'] + 0.006119 * df['density[shoots/m2]'] + 0.108165 * df['coverage[%]'])))))))
+
+    df['TC[gC/m2]'] = np.where(
+        (df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 0,
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 10.232724 + 0.297451 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 6.862504 + 0.295653 * df['biomass[g/m2]'] + 0.080054 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 7.426061 + 0.298152 * df['biomass[g/m2]'] + 0.003718 * df['density[shoots/m2]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 78.7965 + 0.4117 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] > 0), 78.7965 + 0.4117 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 96.56068 + 0.001082 * df['density[shoots/m2]'],
+        6.874866 + 0.297085 * df['biomass[g/m2]'] + 0.003865 * df['density[shoots/m2]'] + 0.010671 * df['coverage[%]'])))))))
+
+    df['CS[tC/ha/yr]'] = np.where(
+        (df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 0,
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] == 0), 6.813338 + 0.001579 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 1.74315 + 0.08654 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] > 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 6.813338 + 0.001579 * df['biomass[g/m2]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] == 0) & (df['coverage[%]'] > 0), 1.74315 + 0.08654 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] > 0), 1.74315 + 0.08654 * df['coverage[%]'],
+        np.where((df['biomass[g/m2]'] == 0) & (df['density[shoots/m2]'] > 0) & (df['coverage[%]'] == 0), 6.659196 + 0.002178 * df['density[shoots/m2]'],
+        1.74315 + 0.08654 * df['coverage[%]'])))))))
+
+    df['TC-conversion[tC/ha]'] = df['TC[gC/m2]'] / 100
+
+    return df
+
+# Function to get input values and calculate results
+def calculate():
+    biomass = float(entry_biomass.get())
+    density = float(entry_density.get())
+    coverage = float(entry_coverage.get())
+    
+    data = {
+        'biomass[g/m2]': [biomass],
+        'density[shoots/m2]': [density],
+        'coverage[%]': [coverage]
+    }
+    
+    df = pd.DataFrame(data)
+    df = calculate_values(df)
+    
+    result_abg.set(f"ABG[gC/m2]: {df['ABG[gC/m2]'].values[0]}")
+    result_bgc.set(f"BGC[gC/m2]: {df['BGC[gC/m2]'].values[0]}")
+    result_tc.set(f"TC[gC/m2]: {df['TC[gC/m2]'].values[0]}")
+    result_cs.set(f"CS[tC/ha/yr]: {df['CS[tC/ha/yr]'].values[0]}")
+    result_tc_conversion.set(f"TC-conversion[tC/ha]: {df['TC-conversion[tC/ha]'].values[0]}")
+
+# Create the main window
+root = tk.Tk()
+root.title("Seagrass Carbon Calculator")
+
+# Create and place labels and entry widgets
+tk.Label(root, text="biomass[g/m2]").grid(row=0, column=0)
+entry_biomass = tk.Entry(root)
+entry_biomass.grid(row=0, column=1)
+
+tk.Label(root, text="density[shoots/m2]").grid(row=1, column=0)
+entry_density = tk.Entry(root)
+entry_density.grid(row=1, column=1)
+
+tk.Label(root, text="coverage[%]").grid(row=2, column=0)
+entry_coverage = tk.Entry(root)
+entry_coverage.grid(row=2, column=1)
+
+# Create and place a button to calculate results
+button_calculate = tk.Button(root, text="Calculate", command=calculate)
+button_calculate.grid(row=3, column=0, columnspan=2)
+
+# Create and place labels to display results
+result_abg = tk.StringVar()
+tk.Label(root, textvariable=result_abg).grid(row=4, column=0, columnspan=2)
+
+result_bgc = tk.StringVar()
+tk.Label(root, textvariable=result_bgc).grid(row=5, column=0, columnspan=2)
+
+result_tc = tk.StringVar()
+tk.Label(root, textvariable=result_tc).grid(row=6, column=0, columnspan=2)
+
+result_cs = tk.StringVar()
+tk.Label(root, textvariable=result_cs).grid(row=7, column=0, columnspan=2)
+
+result_tc_conversion = tk.StringVar()
+tk.Label(root, textvariable=result_tc_conversion).grid(row=8, column=0, columnspan=2)
+
+# Run the main event loop
+root.mainloop()
