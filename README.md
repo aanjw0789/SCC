@@ -1,5 +1,5 @@
 # SCC
-Seagrass Carbon Calculator
+## Seagrass Carbon Calculator
 ==================================
 The app is developed by A. J. Wahyudi
 
