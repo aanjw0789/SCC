@@ -36,11 +36,11 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    ```sh
    venv\Scripts\activate
    ```
-6. Install the dependencies using the requirements.txt file:
+6. Install the dependencies using the `requirements.txt` file:
    ```sh
    pip install -r requirements.txt
    ```
-7. Run the Flask application:
+7. Run the SCC flask application:
    ```sh
    python3 app.py
    ```
