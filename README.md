@@ -2,7 +2,7 @@
 Seagrass Carbon Calculator
 ==================================
 -
-PLEASE read the [LICENSE](https://github.com/aanjw0789/SCC/tree/main?tab=CC-BY-4.0-1-ov-file](https://github.com/aanjw0789/SCC/?tab=CC-BY-4.0-1-ov-file) of this code.
+PLEASE read the [LICENSE](https://github.com/aanjw0789/SCC/?tab=CC-BY-4.0-1-ov-file) of this code.
 ----------------------------------
 The SCC app is developed based on the following source: 
 
