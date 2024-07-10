@@ -47,7 +47,9 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
 8. Your SCC app will start locally, and you can access it in your web browser at `http://127.0.0.1:5000`
 9. You can start calculating the seagrass carbon stock and carbon sequestration/assimilation based on the value of biomass, density, and/or coverage percentage of seagrass
 
+
 Note:
+
 You may use one or a combination of biomass, density, and/or coverage percentages based on the available data you have. Put zero (0) if there is no data.
 
 You will get the results:
