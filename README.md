@@ -22,7 +22,7 @@ Run the Seagrass Carbon Calculator (SCC) Application Locally
    python3 -m venv venv
 
 4. Activate the virtual environment:
-   a. On MacOS and Linux: `source venv/bin/activate`
+   a. On MacOS and Linux: ```sh source venv/bin/activate
    b. On Windows: `venv\Scripts\activate`
 5. Install the dependencies using the requirements.txt file: `pip install -r requirements.txt`
 6. Run the Flask application: `python3 app.py`
