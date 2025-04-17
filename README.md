@@ -2,7 +2,7 @@
 # Seagrass Carbon Calculator (SCC)
 ----------------------------------
 
-_The graphical user interface (GUI) and all codes are developed by A. J. Wahyudi with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
+_A. J. Wahyudi develops the graphical user interface (GUI) and all codes with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
 
 _The last update: 10 July 2024_
 
