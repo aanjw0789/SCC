@@ -1,5 +1,5 @@
 ----------------------------------
-# Seagrass Carbon Calculator (SCC)
+# Seagrass Carbon Converter (SCC)
 ----------------------------------
 
 _A. J. Wahyudi develops the graphical user interface (GUI) and all codes with contributions and input from IMBeR Group members and OpenAI ChatGPT 3.5_
@@ -17,7 +17,7 @@ _Wahyudi, A. J., Rahmawati, S., Irawan, A., Hadiyanto, H., Prayudha, B., Hafizt,
 ----------------------------------
 ## Installation Guide
 ----------------------------------
-Run the Seagrass Carbon Calculator (SCC) Application Locally
+Run the Seagrass Carbon Converter (SCC) Application Locally
 1. Clone the GitHub Repository:
    ```sh
    git clone https://github.com/aanjw0789/SCC.git
